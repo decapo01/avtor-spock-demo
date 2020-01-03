@@ -1,0 +1,12 @@
+version: '3'
+services:
+  postgresql:
+    image: sameersbn/postgresql:10-2
+    ports:
+      - "5432:5432"
+  redis:
+    image: bitnami/redis
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6379:6379"
